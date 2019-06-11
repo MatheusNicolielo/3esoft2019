@@ -83,4 +83,19 @@ public class CorRepositoryJDBC implements CorRepository {
 		statement.close();
 	}
 
+	@Override
+	public void excluir(Cor c) throws Exception {
+		this.excluir(c.getId());
+	}
+
+	@Override
+	public void excluirTodas() throws Exception {
+		String sql = "delete from cor where 1 = 1";
+		PreparedStatement statement = connection.prepareStatement(sql);
+		
+		statement.execute();
+		statement.close();
+	}
+	
+
 }

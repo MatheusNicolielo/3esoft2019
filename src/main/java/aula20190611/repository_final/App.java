@@ -23,7 +23,7 @@ public class App {
 		verde = new Cor(1, "Verde Musgo");
 		repo.alterar(verde);
 
-		repo.excluir(rosa.getId());
+		repo.excluir(rosa);
 
 		List<Cor> cores = repo.obterTodas();
 

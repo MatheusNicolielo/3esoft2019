@@ -8,5 +8,6 @@ public interface CorRepository {
 	List<Cor> obterTodas() throws Exception;
 	void alterar(Cor c) throws Exception;
 	void excluir(int id) throws Exception;
-
+	void excluir(Cor c) throws Exception;
+	void excluirTodas() throws Exception;
 }

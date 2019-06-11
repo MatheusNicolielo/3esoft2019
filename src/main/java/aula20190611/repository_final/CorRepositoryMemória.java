@@ -42,6 +42,16 @@ public class CorRepositoryMemória implements CorRepository {
 		if (aRemover != null) {
 			cores.remove(id);
 		}
+	}
+
+	@Override
+	public void excluir(Cor c) throws Exception {
+		this.excluir(c.getId());
+	}
+
+	@Override
+	public void excluirTodas() throws Exception {
+		this.cores.removeAll(cores);
 	}	
 }
  
